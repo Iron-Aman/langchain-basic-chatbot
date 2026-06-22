@@ -1,8 +1,8 @@
-LangChain Basic Chatbot
+# LangChain Basic Chatbot
 
 A simple AI chatbot built using LangChain, Groq, and Streamlit.
 
-Features
+## Features
 
 * LangChain LCEL Chains
 * Groq LLM Integration
@@ -11,7 +11,7 @@ Features
 * Output Parsers
 * Environment Variable Management
 
-Tech Stack
+## Tech Stack
 
 * Python
 * LangChain
@@ -19,8 +19,9 @@ Tech Stack
 * Streamlit
 * python-dotenv
 
-Project Structure
+## Project Structure
 
+```text
 Langchain_ChatBot/
 │
 ├── app.py
@@ -28,17 +29,26 @@ Langchain_ChatBot/
 ├── README.md
 ├── pyproject.toml
 ├── uv.lock
+├── screenshots/
+│   ├── home_page.png
+│   └── chatbot_response.png
 └── .gitignore
+```
 
-Installation
+## Installation
 
-git clone <repository-url>
-cd Langchain_ChatBot
+```bash
+git clone https://github.com/Iron-Aman/langchain-basic-chatbot.git
+cd langchain-basic-chatbot
+
 uv sync
+```
 
-Run the Application
+## Run the Application
 
+```bash
 streamlit run streamlit_app.py
+```
 
 ## Screenshots
 
@@ -50,9 +60,40 @@ streamlit run streamlit_app.py
 
 ![Chatbot Response](screenshots/chatbot_response.png)
 
-Future Improvements
+## Architecture
+
+```text
+User
+ ↓
+Streamlit UI
+ ↓
+get_response()
+ ↓
+Prompt Template
+ ↓
+Groq LLM
+ ↓
+Output Parser
+ ↓
+Response
+```
+
+## Future Improvements
 
 * Conversation Memory
 * Chat History
 * RAG Integration
 * Multi-Agent Workflows
+
+## Learning Outcomes
+
+This project demonstrates:
+
+* LangChain fundamentals
+* Prompt Templates
+* Output Parsers
+* LCEL Chains
+* Groq API Integration
+* Streamlit Frontend Development
+* Environment Variable Management
+* Basic AI Application Architecture
